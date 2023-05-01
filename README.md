@@ -87,7 +87,7 @@ Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed re
 
 ## Credits
 
-- [Muhammad Huzaifa](https://github.com/muhammadhuzaifa)
+- [Muhammad Huzaifa](https://github.com/huzaifaarain)
 - [All Contributors](../../contributors)
 
 ## License
