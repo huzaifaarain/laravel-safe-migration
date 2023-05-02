@@ -21,7 +21,7 @@ class LaravelSafeMigration
         return in_array($command, config('safe-migration.commands_to_monitor', []));
     }
 
-    private function generateBackup(): bool|BackupFailedException
+    private function generateBackup(): void
     {
         $filename = config('safe-migration.filename', 'safe-migration');
 
@@ -36,6 +36,5 @@ class LaravelSafeMigration
         if ($statusCode !== Command::SUCCESS && config('safe-migration.stop_on_fail') === true) {
             throw new BackupFailedException(Artisan::output());
         }
-        return true;
     }
 }
