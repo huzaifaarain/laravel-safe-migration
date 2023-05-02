@@ -35,6 +35,16 @@ This is the contents of the published config file:
 return [
     /*
     |--------------------------------------------------------------------------
+    | Safe Migration Enabled
+    |--------------------------------------------------------------------------
+    |
+    | This value enable or disable the package functionality.
+    |
+    */
+
+    "safe_migration_enabled" => env('SAFE_MIGRATION_ENABLED', true),
+    /*
+    |--------------------------------------------------------------------------
     | Commands To Monitor
     |--------------------------------------------------------------------------
     |

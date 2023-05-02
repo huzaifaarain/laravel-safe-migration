@@ -21,6 +21,15 @@ class LaravelSafeMigrationServiceProvider extends PackageServiceProvider
             ->name('laravel-safe-migration')
             ->hasConfigFile();
 
+        if (!$this->isPackageEnabled()) {
+            return;
+        }
+
         $this->app['events']->listen(CommandStarting::class, CheckIfCommandIsMonitorable::class);
+    }
+
+    private function isPackageEnabled()
+    {
+        return config('safe-migration.safe_migration_enabled');
     }
 }
