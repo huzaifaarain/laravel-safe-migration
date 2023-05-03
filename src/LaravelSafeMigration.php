@@ -33,8 +33,12 @@ class LaravelSafeMigration
                 "--only-db" => true,
             ]
         );
+
+        $artisanOutput = Artisan::output();
         if ($statusCode !== Command::SUCCESS && config('safe-migration.stop_on_fail') === true) {
-            throw new BackupFailedException(Artisan::output());
+            throw new BackupFailedException($artisanOutput);
         }
+
+        echo $artisanOutput;
     }
 }
