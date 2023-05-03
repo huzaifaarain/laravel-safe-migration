@@ -10,7 +10,7 @@ class LaravelSafeMigration
 {
     public function __construct($command)
     {
-        if (!$this->isMonitorableCommand($command)) {
+        if (! $this->isMonitorableCommand($command)) {
             return;
         }
         $this->generateBackup();
@@ -26,11 +26,11 @@ class LaravelSafeMigration
         $filename = config('safe-migration.filename', 'safe-migration');
 
         $statusCode = Artisan::call(
-            "backup:run",
+            'backup:run',
             [
-                "--filename" => "$filename-" . date("Y-m-d-h:i:s") . ".zip",
-                "--disable-notifications" => true,
-                "--only-db" => true,
+                '--filename' => "$filename-".date('Y-m-d-h:i:s').'.zip',
+                '--disable-notifications' => true,
+                '--only-db' => true,
             ]
         );
 

@@ -2,11 +2,10 @@
 
 namespace MuhammadHuzaifa\LaravelSafeMigration;
 
-use Spatie\LaravelPackageTools\Package;
-use Spatie\LaravelPackageTools\PackageServiceProvider;
-use MuhammadHuzaifa\LaravelSafeMigration\Commands\LaravelSafeMigrationCommand;
 use Illuminate\Console\Events\CommandStarting;
 use MuhammadHuzaifa\LaravelSafeMigration\Listeners\CheckIfCommandIsMonitorable;
+use Spatie\LaravelPackageTools\Package;
+use Spatie\LaravelPackageTools\PackageServiceProvider;
 
 class LaravelSafeMigrationServiceProvider extends PackageServiceProvider
 {
@@ -21,7 +20,7 @@ class LaravelSafeMigrationServiceProvider extends PackageServiceProvider
             ->name('laravel-safe-migration')
             ->hasConfigFile();
 
-        if (!$this->isPackageEnabled()) {
+        if (! $this->isPackageEnabled()) {
             return;
         }
 

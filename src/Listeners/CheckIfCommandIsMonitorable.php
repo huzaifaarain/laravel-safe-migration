@@ -2,7 +2,6 @@
 
 namespace MuhammadHuzaifa\LaravelSafeMigration\Listeners;
 
-use Illuminate\Console\Command;
 use Illuminate\Console\Events\CommandStarting;
 use MuhammadHuzaifa\LaravelSafeMigration\LaravelSafeMigration;
 

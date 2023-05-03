@@ -22,8 +22,8 @@ return [
     |
     */
 
-    "commands_to_monitor" => [
-        "migrate",
+    'commands_to_monitor' => [
+        'migrate',
         'migrate:fresh',
         'migrate:refresh',
         'migrate:reset',
@@ -40,7 +40,7 @@ return [
     |
     */
 
-    "stop_on_fail" => true,
+    'stop_on_fail' => true,
 
     /*
     |--------------------------------------------------------------------------
@@ -52,5 +52,5 @@ return [
     |
     */
 
-    "filename" => "safe-migration",
+    'filename' => 'safe-migration',
 ];
